@@ -1,0 +1,70 @@
+{% extends "layouts/service.njk" %} {% block pageTitle %} Choose destination –
+Space travel service {% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <h1 class="govuk-heading-l">Enter your details</h1>
+
+    <form action="/spacetravel/check-answers" method="post">
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1"> Full name </label>
+          <input
+            class="govuk-input"
+            id="full-name"
+            name="addressLine1"
+            type="text"
+            autocomplete="address-line1"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-2"> Address line </label>
+          <input
+            class="govuk-input"
+            id="address-line-2"
+            name="addressLine2"
+            type="text"
+            autocomplete="address-line2"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town"> Town or city </label>
+          <input
+            class="govuk-input govuk-!-width-two-thirds"
+            id="address-town"
+            name="addressTown"
+            type="text"
+            autocomplete="address-level2"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-county">
+            County (optional)
+          </label>
+          <input
+            class="govuk-input govuk-!-width-two-thirds"
+            id="address-county"
+            name="addressCounty"
+            type="text"
+          />
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode"> Postcode </label>
+          <input
+            class="govuk-input govuk-input--width-10"
+            id="address-postcode"
+            name="addressPostcode"
+            type="text"
+            autocomplete="postal-code"
+          />
+        </div>
+      </fieldset>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

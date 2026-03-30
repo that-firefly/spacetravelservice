@@ -1,0 +1,52 @@
+{% extends "layouts/service.njk" %} {% block pageTitle %} Choose destination –
+Space travel service {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Check your answers</h1>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Destination</dt>
+        <dd class="govuk-summary-list__value">{{ data['destination'] }}</dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="./choose-destination-questions.html">
+            Change<span class="govuk-visually-hidden"> destination</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Full name</dt>
+        <dd class="govuk-summary-list__value">{{ data['fullName'] }}</dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="./personal-details.html">
+            Change<span class="govuk-visually-hidden"> full name</span>
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Address</dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['addressLine1'] }}<br />
+          {{ data['addressLine2'] }}<br />
+          {{ data['townCity'] }}<br />
+          {{ data['postcode'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="./personal-details.html">
+            Change<span class="govuk-visually-hidden"> address</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <form action="/spacetravel/confirmation" method="post">
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Accept and send
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

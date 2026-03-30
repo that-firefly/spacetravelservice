@@ -1,45 +1,20 @@
-{% extends "layouts/main.html" %}
-
-{% block pageTitle %}
-  {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-
-{% block content %}
+{% extends "layouts/main.html" %} {% block pageTitle %} {{ serviceName }} –
+GOV.UK Prototype Kit {% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
-    <h1 class="govuk-heading-l">
-      Welcome to the {{ serviceName }} prototype simulation
-    </h1>
+    <h1 class="govuk-heading-l">Welcome to the {{ serviceName }}</h1>
 
     <p class="govuk-body">
-      This is the landing page for your service. Add links or user journeys below.
+      Book your imaginary trip to space using this prototype service.
     </p>
-
-    <!-- Main journey -->
-    <a class="govuk-button" href="/login" data-module="govuk-button">
+    <a
+      class="govuk-button"
+      href="./spacetravel/choose-destination.html"
+      data-module="govuk-button"
+    >
       Start now
     </a>
-
-    <!-- MTD sub-journey -->
-    <h2 class="govuk-heading-m">Task List / Check Answers / Routing prototype journeys</h2>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>
-        <a class="govuk-link" href="/mtd-complex/start">
-          MTD - Complex journey
-        </a>
-      </li>
-       <li>
-        <a class="govuk-link" href="/mtd-example/start">
-          MTD - simple journey
-        </a>
-      </li>
-    </ul>
-
   </div>
 </div>
 

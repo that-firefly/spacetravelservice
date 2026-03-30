@@ -1,13 +1,6 @@
 module.exports = function (router) {
 
   // ---------------------------------------------
-  // ROOT
-  // ---------------------------------------------
-  router.get('/', function (req, res) {
-    res.render('index') 
-  })
-
-  // ---------------------------------------------
   // Space travel service
   // ---------------------------------------------
 
@@ -78,8 +71,8 @@ module.exports = function (router) {
     res.redirect('/spacetravel/confirmation')
   })
 
-  
 
 }
+
 
 

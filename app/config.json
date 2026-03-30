@@ -1,5 +1,5 @@
 {
-  "serviceName": "MTD Property Income",
+  "serviceName": "Space Travel service",
   "plugins": {
     "govuk-frontend": {
       "rebrand": true

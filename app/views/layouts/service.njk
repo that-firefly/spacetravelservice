@@ -1,0 +1,9 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    productName: "Space Travel service"
+  }) }}
+{% endblock %}

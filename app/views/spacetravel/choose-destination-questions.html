@@ -1,0 +1,58 @@
+{% extends "layouts/service.njk" %} {% block pageTitle %} Choose destination –
+Space travel service {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <form action="/spacetravel/personal-details" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="destination-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Which destination do you want to travel to?
+            </h1>
+          </legend>
+
+          <div id="destination-hint" class="govuk-hint">Select one option.</div>
+
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="destination"
+                name="destination"
+                type="radio"
+                value="Moon"
+              />
+              <label class="govuk-label govuk-radios__label" for="destination">
+                Moon
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="destination-2"
+                name="destination"
+                type="radio"
+                value="Mars"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="destination-2"
+              >
+                Mars
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

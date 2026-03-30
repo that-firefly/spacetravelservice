@@ -1,0 +1,32 @@
+{% extends "layouts/service.njk" %} {% block pageTitle %} Choose destination –
+Space travel service {% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+
+    <h1 class="govuk-heading-xl">Apply for space travel</h1>
+
+    <p class="govuk-body">
+      Use this service to choose your destination and enter your details.
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>choose between the Moon and Mars</li>
+      <li>enter your name</li>
+      <li>enter your address</li>
+      <li>check your answers before submitting</li>
+    </ul>
+
+    <a
+      href="./choose-destination-questions.html"
+      role="button"
+      draggable="false"
+      class="govuk-button"
+      data-module="govuk-button"
+    >
+      Continue
+    </a>
+  </div>
+</div>
+{% endblock %}

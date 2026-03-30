@@ -3,4 +3,15 @@
 // https://prototype-kit.service.gov.uk/docs/adding-css-javascript-and-images
 // 
 
+.govuk-service-navigation {
+    border-bottom-width: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #ffffff;
+    background-color: #ffffff;
+}
+
+.govuk-header__product-name {
+    font-weight: 400;
+}
+
 // Add extra styles here
