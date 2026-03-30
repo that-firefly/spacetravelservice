@@ -1,0 +1,8 @@
+{
+  "serviceName": "MTD Property Income",
+  "plugins": {
+    "govuk-frontend": {
+      "rebrand": true
+    }
+  }
+}

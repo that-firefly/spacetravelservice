@@ -1,0 +1,98 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Ruling issued – Advanced Ruling – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back to dashboard",
+    href: "/dashboard"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <!-- Left menu -->
+<div class="govuk-grid-column-one-quarter">
+  <nav class="govuk-side-nav" style="border-right:1px solid #b1b4b6; padding-right:20px;">
+    <ul class="govuk-list govuk-list--spaced">
+      <li><a href="/dashboard" class="govuk-link">Dashboard</a></li>
+      <li><a href="/properties" class="govuk-link">Properties</a></li>
+      <li><a href="/income-expenses" class="govuk-link">Income &amp; expenses</a></li>
+      <li><a href="/quarterly-updates" class="govuk-link">Quarterly updates</a></li>
+      <li><a href="/submissions" class="govuk-link">Submissions</a></li>
+      <li><a href="/settings" class="govuk-link">Settings</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+  <!-- Main content -->
+  <div class="govuk-grid-column-three-quarters">
+
+    <div class="govuk-notification-banner govuk-notification-banner--success" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Ruling issued
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          HMRC has issued an advanced ruling for your property expense.
+        </p>
+      </div>
+    </div>
+
+    <h1 class="govuk-heading-l">Advanced ruling for Flat A – window replacement</h1>
+
+    <p class="govuk-body">
+      Ruling reference: <strong>ARS-2025-00417</strong><br>
+      Date issued: <strong>23 November 2025</strong>
+    </p>
+
+    <h2 class="govuk-heading-m">HMRC decision</h2>
+
+    <p class="govuk-body">
+      The cost of replacing the single-glazed windows with double-glazed windows is treated as a
+      <strong>revenue expense</strong> for tax purposes.
+    </p>
+
+    <p class="govuk-body">
+      You can claim the full amount of <strong>£12,000</strong> as an allowable property expense in your Making Tax Digital submissions.
+    </p>
+
+    <h2 class="govuk-heading-m">Reasoning</h2>
+
+    <p class="govuk-body">
+      On the information provided, HMRC considers that:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the work restored the property to a good state of repair, rather than substantially improving or altering it</li>
+      <li>double-glazing is now the modern equivalent of the original single-glazed windows</li>
+      <li>the expenditure is therefore classified as a repair, not a capital improvement</li>
+    </ul>
+
+    <p class="govuk-body">
+      This ruling applies only to the specific property and circumstances you described. You should not assume it applies to other
+      properties or different types of work.
+    </p>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>include this expense as an allowable deduction in the relevant MTD period</li>
+      <li>keep this ruling with your records in case HMRC asks about it in the future</li>
+    </ul>
+
+    <p class="govuk-body">
+      You can view this ruling at any time in your <a class="govuk-link" href="/submissions">Submissions</a> or
+      <a class="govuk-link" href="/properties">property details</a>.
+    </p>
+
+  </div>
+</div>
+
+{% endblock %}

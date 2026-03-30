@@ -1,0 +1,117 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Tell us about the expense – Advanced Ruling – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/ars/start"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <!-- Left menu -->
+  <div class="govuk-grid-column-one-quarter">
+  <nav class="govuk-side-nav" style="border-right:1px solid #b1b4b6; padding-right:20px;">
+    <ul class="govuk-list govuk-list--spaced">
+      <li><a href="/dashboard" class="govuk-link">Dashboard</a></li>
+      <li><a href="/properties" class="govuk-link">Properties</a></li>
+      <li><a href="/income-expenses" class="govuk-link">Income &amp; expenses</a></li>
+      <li><a href="/quarterly-updates" class="govuk-link">Quarterly updates</a></li>
+      <li><a href="/submissions" class="govuk-link">Submissions</a></li>
+      <li><a href="/settings" class="govuk-link">Settings</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+  <!-- Main content -->
+  <div class="govuk-grid-column-three-quarters">
+
+    <span class="govuk-caption-l">Advanced Ruling Service</span>
+    <h1 class="govuk-heading-l">Tell us about the expense</h1>
+
+    <form method="post" action="/ars/review">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="property">
+          Which property does this expense relate to?
+        </label>
+        <select class="govuk-select" id="property" name="property">
+          <option value="">Select a property</option>
+          <option value="flat-a">Flat A — 2 bed, London</option>
+          <option value="house-b">House B — 3 bed, Manchester</option>
+          <option value="studio-c">Studio C — 1 bed, Leeds</option>
+          <option value="maisonette-d">Maisonette D — 2 bed, Birmingham</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="expenseDate">
+          When did you incur the expense?
+        </label>
+        <div id="expenseDate-hint" class="govuk-hint">
+          For example, 14 8 2025.
+        </div>
+        <div class="govuk-date-input" id="expenseDate" aria-describedby="expenseDate-hint">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="expenseDate-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expenseDate-day" name="expenseDate-day" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="expenseDate-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="expenseDate-month" name="expenseDate-month" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="expenseDate-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="expenseDate-year" name="expenseDate-year" type="text" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="amount">
+          Amount of the expense
+        </label>
+        <div class="govuk-input__wrapper">
+          <div class="govuk-input__prefix" aria-hidden="true">£</div>
+          <input class="govuk-input govuk-input--width-10" id="amount" name="amount" type="text" inputmode="decimal">
+        </div>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="description">
+          Describe the expense and why you are unsure about the tax treatment
+        </label>
+        <div id="description-hint" class="govuk-hint">
+          Give as much detail as you can, including what work was done, why it was needed and anything replaced or improved.
+        </div>
+        <textarea class="govuk-textarea" id="description" name="description" rows="7" aria-describedby="description-hint"></textarea>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

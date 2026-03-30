@@ -1,0 +1,66 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Quarterly update submitted – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back to dashboard",
+    href: "/dashboard"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+ <!-- Sidebar -->
+  <div class="govuk-grid-column-one-quarter">
+    <nav class="govuk-side-nav">
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a href="/dashboard" class="govuk-link">Dashboard</a></li>
+        <li><a href="/properties" class="govuk-link">Properties</a></li>
+        <li><a href="/income-expenses" class="govuk-link">Income and expenses</a></li>
+        <li><a href="/quarterly-updates" class="govuk-link">Quarterly updates</a></li>
+        <li><a href="/submissions" class="govuk-link">Submissions</a></li>
+        <li><a href="/yourdetails" class="govuk-link" aria-current="page">Your details</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+
+  <!-- Main content -->
+  <div class="govuk-grid-column-three-quarters">
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Quarterly update submitted
+      </h1>
+      <div class="govuk-panel__body">
+        Period: 6 Jul – 5 Oct 2025<br>
+        Submission reference: <strong>QUPI-3F9K21</strong>
+      </div>
+    </div>
+
+    <p class="govuk-body">
+      We have received your quarterly update for UK property income. You do not need to do anything else for this period.
+    </p>
+
+    <p class="govuk-body">
+      You can view this submission at any time from the <a class="govuk-link" href="/submissions">Submissions</a> section.
+    </p>
+
+    <h2 class="govuk-heading-m">What you can do next</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>request an <a class="govuk-link" href="/ars/start">advanced ruling</a> about a complex property expense</li>
+      <li>update your <a class="govuk-link" href="/properties">property details</a></li>
+      <li>return to your <a class="govuk-link" href="/dashboard">dashboard</a></li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}

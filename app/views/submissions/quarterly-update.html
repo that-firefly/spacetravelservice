@@ -1,0 +1,102 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Quarterly update – 6 July to 5 October 2025 – MTD Property Income – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/submissions"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-quarter">
+    <nav class="govuk-side-nav">
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a href="/dashboard" class="govuk-link">Dashboard</a></li>
+        <li><a href="/properties" class="govuk-link">Properties</a></li>
+        <li><a href="/income-expenses" class="govuk-link">Income and expenses</a></li>
+        <li><a href="/quarterly-updates-start" class="govuk-link">Quarterly updates</a></li>
+        <li><a href="/submissions-list" class="govuk-link">Submissions</a></li>
+        <li><a href="/yourdetails" class="govuk-link" aria-current="page">Your details</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <h1 class="govuk-heading-l">Quarterly update for 6 July to 5 October 2025</h1>
+
+    <p class="govuk-body">Complete the tasks below to finish your quarterly update.</p>
+
+    <ol class="govuk-task-list">
+
+      <li class="govuk-task-list__item govuk-!-padding-bottom-5">
+        <div class="govuk-task-list__name-and-tag">
+          <span class="govuk-task-list__name">
+            <a href="/quarterly/ruling" class="govuk-link">Ruling reference: ARS-2025-00417 — window replacement</a>
+          </span>
+          <strong class="govuk-tag govuk-tag--green">Completed</strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-!-padding-bottom-5">
+        <div class="govuk-task-list__name-and-tag">
+          <span class="govuk-task-list__name">
+            <a href="/quarterly/ownership" class="govuk-link">Proof of property ownership</a>
+          </span>
+          <strong class="govuk-tag govuk-tag--grey">Not started</strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-!-padding-bottom-5">
+        <div class="govuk-task-list__name-and-tag">
+          <span class="govuk-task-list__name">
+            <a href="/quarterly/tenancy" class="govuk-link">Tenancy records</a>
+          </span>
+          <strong class="govuk-tag govuk-tag--grey">Not started</strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-!-padding-bottom-5">
+        <div class="govuk-task-list__name-and-tag">
+          <span class="govuk-task-list__name">
+            <a href="/quarterly/income-expenses" class="govuk-link">Income and expense evidence</a>
+          </span>
+          <strong class="govuk-tag govuk-tag--blue">In progress</strong>
+        </div>
+      </li>
+
+      <li class="govuk-task-list__item govuk-!-padding-bottom-5">
+        <div class="govuk-task-list__name-and-tag">
+          <span class="govuk-task-list__name">
+            Pending confirmation from HMRC
+          </span>
+          <strong class="govuk-tag govuk-tag--yellow">Pending</strong>
+        </div>
+        <p class="govuk-hint">We are checking your records. This usually takes 1 to 2 working days.</p>
+      </li>
+
+      <li class="govuk-task-list__item govuk-!-padding-bottom-5">
+        <div class="govuk-task-list__name-and-tag">
+          <span class="govuk-task-list__name">
+            Provide additional evidence
+          </span>
+          <strong class="govuk-tag govuk-tag--red">Action needed</strong>
+        </div>
+      </li>
+
+    </ol>
+
+    <a href="/quarterly/check-answers" class="govuk-button govuk-!-margin-top-6">Continue to check your answers</a>
+
+  </div>
+
+</div>
+
+{% endblock %}

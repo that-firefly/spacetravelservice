@@ -1,0 +1,32 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  What type of property do you receive income from?
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-l">What type of property do you receive income from?</h1>
+
+<form method="post" action="/mtd/property-type-answer">
+
+  <div class="govuk-radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="residential" name="propertyType" value="Residential" type="radio">
+      <label class="govuk-label govuk-radios__label" for="residential">Residential</label>
+    </div>
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="commercial" name="propertyType" value="Commercial" type="radio">
+      <label class="govuk-label govuk-radios__label" for="commercial">Commercial</label>
+    </div>
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="holiday" name="propertyType" value="Holiday let" type="radio">
+      <label class="govuk-label govuk-radios__label" for="holiday">Holiday let</label>
+    </div>
+  </div>
+
+  <button class="govuk-button" type="submit">Continue</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+  <h1 class="govuk-heading-xl">
+    Check your answers
+  </h1>
+
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Property type
+      </dt>
+
+      <dd class="govuk-summary-list__value">
+        {{ data.propertyType }}
+      </dd>
+
+      <dd class="govuk-summary-list__actions">
+        <a href="/mtd-example/property-type">
+          Change
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+  <form action="/confirmation" method="post">
+    <button class="govuk-button">
+      Confirm and submit
+    </button>
+  </form>
+{% endblock %}

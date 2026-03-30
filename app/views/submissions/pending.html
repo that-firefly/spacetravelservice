@@ -1,0 +1,32 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Pending confirmation – Quarterly update – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/quarterly-update"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    {% include "includes/side-nav.html" %}
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+
+    <h1 class="govuk-heading-l">We’re checking your records</h1>
+
+    <p class="govuk-body">This usually takes 1 to 2 working days.</p>
+
+    <p class="govuk-body">You’ll be notified when the checks are complete.</p>
+
+  </div>
+</div>
+
+{% endblock %}

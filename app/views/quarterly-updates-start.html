@@ -1,0 +1,66 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Start quarterly update – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/dashboard"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+ <!-- Sidebar -->
+  <div class="govuk-grid-column-one-quarter">
+    <nav class="govuk-side-nav">
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a href="/dashboard" class="govuk-link">Dashboard</a></li>
+        <li><a href="/properties" class="govuk-link">Properties</a></li>
+        <li><a href="/income-expenses" class="govuk-link">Income and expenses</a></li>
+        <li><a href="/quarterly-updates-start" class="govuk-link">Quarterly updates</a></li>
+        <li><a href="/submissions-list" class="govuk-link">Submissions</a></li>
+        <li><a href="/yourdetails" class="govuk-link" aria-current="page">Your details</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+
+  <!-- Main content -->
+  <div class="govuk-grid-column-three-quarters">
+
+    <span class="govuk-caption-l">Quarterly updates</span>
+    <h1 class="govuk-heading-l">6 Jul – 5 Oct 2025</h1>
+
+    <p class="govuk-body">
+      You are about to submit a quarterly update for your UK property income for the period
+      <strong>6 July 2025 to 5 October 2025</strong>.
+    </p>
+
+    <p class="govuk-body">
+      You’ll be asked to confirm:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>rental income received in this period</li>
+      <li>allowable expenses you want to claim</li>
+      <li>that the information is complete and correct to the best of your knowledge</li>
+    </ul>
+
+    <form method="post" action="/quarterly-updates/income">
+
+      <button class="govuk-button" data-module="govuk-button">
+        Start now
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

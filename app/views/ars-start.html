@@ -1,0 +1,103 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Request an advanced ruling – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/dashboard"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <!-- Left menu -->
+<div class="govuk-grid-column-one-quarter">
+  <nav class="govuk-side-nav" style="border-right:1px solid #b1b4b6; padding-right:20px;">
+    <ul class="govuk-list govuk-list--spaced">
+      <li><a href="/dashboard" class="govuk-link">Dashboard</a></li>
+      <li><a href="/properties" class="govuk-link">Properties</a></li>
+      <li><a href="/income-expenses" class="govuk-link">Income &amp; expenses</a></li>
+      <li><a href="/quarterly-updates" class="govuk-link">Quarterly updates</a></li>
+      <li><a href="/submissions" class="govuk-link">Submissions</a></li>
+      <li><a href="/settings" class="govuk-link">Settings</a></li>
+    </ul>
+  </nav>
+</div>
+
+
+  <!-- Main content -->
+  <div class="govuk-grid-column-three-quarters">
+
+    <span class="govuk-caption-l">Advanced Ruling Service</span>
+    <h1 class="govuk-heading-l">Request an advanced ruling about a property expense</h1>
+
+    <p class="govuk-body">
+      Use this service to ask HMRC how a complex or unusual property expense should be treated for tax purposes.
+    </p>
+
+    <p class="govuk-body">
+      You should only use this service if:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>the amount involved is significant</li>
+      <li>the tax treatment is genuinely uncertain</li>
+      <li>you can provide detailed evidence about the expense</li>
+    </ul>
+
+    <form method="post" action="/ars/details">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="ars-type-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              What does your question mainly relate to?
+            </h2>
+          </legend>
+          <div id="ars-type-hint" class="govuk-hint">
+            Select the option that best describes the expense you want a ruling on.
+          </div>
+
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ars-type-1" name="arsType" type="radio" value="repairs">
+              <label class="govuk-label govuk-radios__label" for="ars-type-1">
+                Repairs vs. improvements
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ars-type-2" name="arsType" type="radio" value="capital">
+              <label class="govuk-label govuk-radios__label" for="ars-type-2">
+                Capital vs. revenue treatment
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ars-type-3" name="arsType" type="radio" value="mixed">
+              <label class="govuk-label govuk-radios__label" for="ars-type-3">
+                Mixed use (private and business)
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="ars-type-4" name="arsType" type="radio" value="other">
+              <label class="govuk-label govuk-radios__label" for="ars-type-4">
+                Something else
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

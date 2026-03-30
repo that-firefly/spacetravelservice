@@ -1,0 +1,30 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+  <h1 class="govuk-heading-l">
+    What type of property do you rent out?
+  </h1>
+
+  <form action="/check-answers" method="post">
+
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input
+          class="govuk-radios__input"
+          id="res"
+          name="propertyType"
+          type="radio"
+          value="Residential"
+        >
+        <label class="govuk-label govuk-radios__label" for="res">
+          Residential
+        </label>
+      </div>
+    </div>
+
+    <button class="govuk-button">
+      Continue
+    </button>
+
+  </form>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Enter income – quarterly update – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "/quarterly-updates/start"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+   <!-- Sidebar -->
+  <div class="govuk-grid-column-one-quarter">
+    <nav class="govuk-side-nav">
+      <ul class="govuk-list govuk-list--spaced">
+        <li><a href="/dashboard" class="govuk-link">Dashboard</a></li>
+        <li><a href="/properties" class="govuk-link">Properties</a></li>
+        <li><a href="/income-expenses" class="govuk-link">Income and expenses</a></li>
+        <li><a href="/quarterly-updates" class="govuk-link">Quarterly updates</a></li>
+        <li><a href="/submissions" class="govuk-link">Submissions</a></li>
+        <li><a href="/settings" class="govuk-link" aria-current="page">Your details</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <!-- Main content -->
+  <div class="govuk-grid-column-three-quarters">
+
+    <span class="govuk-caption-l">6 Jul – 5 Oct 2025</span>
+    <h1 class="govuk-heading-l">Enter rental income</h1>
+
+    <form method="post" action="/quarterly-updates/expenses">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="rentReceived">
+          Total rent received in this period
+        </label>
+        <div id="rentReceived-hint" class="govuk-hint">
+          Include rent received for all UK properties between 6 July and 5 October 2025.
+        </div>
+        <div class="govuk-input__wrapper">
+          <div class="govuk-input__prefix" aria-hidden="true">£</div>
+          <input class="govuk-input govuk-input--width-10" id="rentReceived" name="rentReceived" type="text" inputmode="decimal" aria-describedby="rentReceived-hint">
+        </div>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="otherIncome">
+          Other property income (optional)
+        </label>
+        <div id="otherIncome-hint" class="govuk-hint">
+          For example, insurance payouts for lost rent or premiums received.
+        </div>
+        <div class="govuk-input__wrapper">
+          <div class="govuk-input__prefix" aria-hidden="true">£</div>
+          <input class="govuk-input govuk-input--width-10" id="otherIncome" name="otherIncome" type="text" inputmode="decimal" aria-describedby="otherIncome-hint">
+        </div>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
